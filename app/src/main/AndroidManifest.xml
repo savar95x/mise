@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- TMDB, posters, Google Fonts, Supabase sync. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Voice memos and live transcription. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- In-app updates from GitHub Releases. -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.UPDATE_PACKAGES_WITHOUT_USER_ACTION" />
+
+    <!-- Speech recognizers and Instagram, so they're visible on Android 11+. -->
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+        <package android:name="com.instagram.android" />
+    </queries>
+
+    <application
+        android:name=".MiseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_clapper"
+        android:roundIcon="@mipmap/ic_launcher_clapper"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Mise"
+        android:enableOnBackInvokedCallback="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Launcher entries, one per app icon (Settings → Look → App icon). Exactly one is enabled; see AppIcons.kt. -->
+        <activity-alias
+            android:name=".IconClapper"
+            android:targetActivity=".MainActivity"
+            android:icon="@mipmap/ic_launcher_clapper"
+            android:roundIcon="@mipmap/ic_launcher_clapper"
+            android:label="@string/app_name"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name=".IconQuote"
+            android:targetActivity=".MainActivity"
+            android:icon="@mipmap/ic_launcher_quote"
+            android:roundIcon="@mipmap/ic_launcher_quote"
+            android:label="@string/app_name"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name=".IconPlay"
+            android:targetActivity=".MainActivity"
+            android:icon="@mipmap/ic_launcher_play"
+            android:roundIcon="@mipmap/ic_launcher_play"
+            android:label="@string/app_name"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name=".IconEye"
+            android:targetActivity=".MainActivity"
+            android:icon="@mipmap/ic_launcher_eye"
+            android:roundIcon="@mipmap/ic_launcher_eye"
+            android:label="@string/app_name"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name=".IconViewfinder"
+            android:targetActivity=".MainActivity"
+            android:icon="@mipmap/ic_launcher_viewfinder"
+            android:roundIcon="@mipmap/ic_launcher_viewfinder"
+            android:label="@string/app_name"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name=".IconFrame"
+            android:targetActivity=".MainActivity"
+            android:icon="@mipmap/ic_launcher_frame"
+            android:roundIcon="@mipmap/ic_launcher_frame"
+            android:label="@string/app_name"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
+        <receiver android:name=".UpdateReceiver" android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.files"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+</manifest>
