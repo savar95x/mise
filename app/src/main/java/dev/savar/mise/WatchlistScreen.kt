@@ -90,7 +90,7 @@ fun WatchlistScreen(onAdd: () -> Unit) {
 @Composable
 private fun PosterTile(t: Title, onClick: () -> Unit) {
     Column(Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).clickable(onClick = onClick)) {
-        BoxWithConstraints(Modifier.fillMaxWidth()) { Poster(t, maxWidth, corner = 12.dp) }
+        BoxWithConstraints(Modifier.fillMaxWidth()) { Poster(t, maxWidth, corner = 12.dp, showName = false) }
         Spacer(Modifier.height(6.dp))
         Text(t.name, style = MaterialTheme.typography.labelLarge, maxLines = 2, overflow = TextOverflow.Ellipsis)
         Text(

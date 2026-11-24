@@ -24,7 +24,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.AutoStories
 import androidx.compose.material.icons.rounded.Mic
-import androidx.compose.material.icons.rounded.Replay
 import androidx.compose.material.icons.rounded.SystemUpdate
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
@@ -151,10 +150,6 @@ fun DiaryRow(t: Title, w: Watch, onClick: () -> Unit) {
         if (w.memos.isNotEmpty()) {
             Spacer(Modifier.width(8.dp))
             Icon(Icons.Rounded.Mic, "Voice memo", tint = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.size(20.dp))
-        }
-        if (rewatch) {
-            Spacer(Modifier.width(4.dp))
-            Icon(Icons.Rounded.Replay, null, tint = MaterialTheme.colorScheme.onSurfaceVariant, modifier = Modifier.size(20.dp))
         }
     }
 }

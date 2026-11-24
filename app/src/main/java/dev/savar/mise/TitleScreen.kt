@@ -183,7 +183,8 @@ private fun Header(t: Title, onDelete: () -> Unit) {
     val scope = rememberCoroutineScope()
     var menu by remember { mutableStateOf(false) }
     val surface = MaterialTheme.colorScheme.surface
-    Box(Modifier.fillMaxWidth().aspectRatio(16f / 10f)) {
+    // A wide backdrop when there is one; otherwise just room for the top bar above the poster.
+    Box(if (t.backdrop.isNotBlank()) Modifier.fillMaxWidth().aspectRatio(16f / 10f) else Modifier.fillMaxWidth().statusBarsPadding().height(120.dp)) {
         if (t.backdrop.isNotBlank()) Backdrop(t, Modifier.fillMaxSize())
         Box(
             Modifier.fillMaxSize().background(
