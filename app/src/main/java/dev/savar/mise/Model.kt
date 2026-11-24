@@ -152,3 +152,6 @@ data class Watch(
 
 internal fun JSONObject.optIntOrNull(key: String): Int? = if (has(key) && !isNull(key)) optInt(key) else null
 internal fun JSONArray.strings(): List<String> = (0 until length()).map { getString(it) }
+
+internal fun <T> JSONArray?.mapObjects(f: (JSONObject) -> T): List<T> =
+    if (this == null) emptyList() else (0 until length()).mapNotNull { i -> optJSONObject(i)?.let(f) }
