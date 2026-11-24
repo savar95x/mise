@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.savar.mise.ModelTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-24T07:47:23.392Z" hostname="runnervm0hi8g" time="7.758">
+  <properties/>
+  <testcase name="yearNumberAndRewatch" classname="dev.savar.mise.ModelTest" time="4.613"/>
+  <testcase name="titleRoundTrips" classname="dev.savar.mise.ModelTest" time="0.064"/>
+  <testcase name="mergeKeepsNewerAndUnionsMemos" classname="dev.savar.mise.ModelTest" time="0.073"/>
+  <testcase name="tmdbYear" classname="dev.savar.mise.ModelTest" time="0.051"/>
+  <testcase name="watchRoundTrips" classname="dev.savar.mise.ModelTest" time="0.043"/>
+  <testcase name="journalRoundTrips" classname="dev.savar.mise.ModelTest" time="0.039"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

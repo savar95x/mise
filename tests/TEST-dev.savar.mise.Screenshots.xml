@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dev.savar.mise.Screenshots" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-11-24T07:47:31.162Z" hostname="runnervm0hi8g" time="13.151">
+  <properties/>
+  <testcase name="titlePage" classname="dev.savar.mise.Screenshots" time="6.804"/>
+  <testcase name="titlePageLight" classname="dev.savar.mise.Screenshots" time="0.472"/>
+  <testcase name="logRecording" classname="dev.savar.mise.Screenshots" time="0.783"/>
+  <testcase name="update" classname="dev.savar.mise.Screenshots" time="0.374"/>
+  <testcase name="watchlist" classname="dev.savar.mise.Screenshots" time="0.356"/>
+  <testcase name="logNewShow" classname="dev.savar.mise.Screenshots" time="0.397"/>
+  <testcase name="diaryEmpty" classname="dev.savar.mise.Screenshots" time="0.273"/>
+  <testcase name="diaryLight" classname="dev.savar.mise.Screenshots" time="0.34"/>
+  <testcase name="appIcons" classname="dev.savar.mise.Screenshots" time="0.222"/>
+  <testcase name="settings" classname="dev.savar.mise.Screenshots" time="0.407"/>
+  <testcase name="diaryDark" classname="dev.savar.mise.Screenshots" time="0.324"/>
+  <testcase name="storyCard" classname="dev.savar.mise.Screenshots" time="0.28"/>
+  <testcase name="syncPage" classname="dev.savar.mise.Screenshots" time="0.319"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
