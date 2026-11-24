@@ -83,7 +83,7 @@ dependencies {
     implementation("androidx.graphics:graphics-shapes:1.0.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
 
-    // Unit tests for the model and sync merge, plus screenshot rendering (Robolectric, native graphics) in CI.
+    // Unit tests (model, journal JSON, sync merge) and screenshot rendering (Robolectric, native graphics) in CI.
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.16")
     testImplementation("androidx.test:core-ktx:1.6.1")
